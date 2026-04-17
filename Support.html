@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Support Page</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="navbar">
+    <a href="Mood-check.html">Mood Check</a>
+    <a href="Support.html">Support</a>
+    <a href="Booking.html">Booking</a>
+    <a href="Confirmation.html">Confirmation</a>
+  </header>
+
+  <div class="container">
+
+    <h1>Talk to someone</h1>
+    <p class="intro">
+      You are not alone. This is a safe space where you can share whats on your mind.
+    </p>
+
+
+     <div class="input-area">
+      <input type="text" id="userInput" placeholder="Type how you're feeling..." /> 
+      <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <div class="card">
+      <h3>Prefer professional help?</h3>
+      <p>Book a private session with a psychologist.</p>
+      <button onclick="location.href='Booking.html'">Book a session</button>
+    </div>
+
+    <div class="card">
+      <h3>Try something calming</h3>
+      <button>Breathing Exercise</button>
+      <button>Grounding Technique</button>
+      <button>Journaling</button>
+    </div>
+
+    <div class="card emergency">
+      <h3>Need urgent help?</h3>
+      <p>If you feel unsafe, please seek immediate help.</p>
+      <button>Get Emergency Help</button>
+    </div>
+
+  </div>
+
+</body>
+</html>

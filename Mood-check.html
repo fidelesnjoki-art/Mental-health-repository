@@ -1,0 +1,63 @@
+
+   <!DOCTYPE html>
+<html>
+<head>
+  <title>Mood Check Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="navbar">
+
+            <a href="Mood-check.html">Mood-check </a>
+            <a href="Support.html"> Support </a>
+            <a href="Booking.html">Booking </a>
+            <a href="Confirmation.html">Confirmation </a>
+
+
+  <h2>How are you feeling today?</h2>
+  <p>Take a moment to share how you are feeling and get our help</p>
+
+  <button onclick="setMood('Good')">😊 Good</button>
+  <button onclick="setMood('Okay')">🙂 Okay</button>
+  <button onclick="setMood('Low')">😔 Low</button>
+  <button onclick="setMood('Struggling')">😞 Struggling</button>
+
+  <h3>What Is Affecting you</h3>
+  <p>Sometimes feeling anxious and overwhelmed is normal and we are here to help you feel relaxed</p>
+  you may share with us what is disturbing and stressing you and we will work it out together.
+
+
+  <h3>Fill in this area to express how you are feeling</h3>
+  <textarea id="notes" placeholder="Express how you are feeling"></textarea>
+
+  <p id="result"></p>
+
+
+<script>
+    function setMood(mood) {
+      let message = "";
+
+     if (mood === "Good") {
+        message = "Nice! Keep it up 😊";
+
+       } 
+       else if (mood === "Okay") {
+       message = "You're doing okay. Take it easy.A small breathing exercise can make you feel better.";
+      } 
+       else if (mood === "Low") {
+        message = "Sorry you're feeling low. You dont have to handle it alone talk to someone.";
+        
+        } 
+      else {
+         message = "You're not alone. Please get support right now.";
+      
+      }
+
+       document.getElementById("result").innerText = message;
+     }
+   </script>
+   <a href="Index.html">Back to Home</a>
+
+ </body>
+ </html>
