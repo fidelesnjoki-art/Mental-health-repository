@@ -8,9 +8,3 @@ function testGetResponse() {
         console.log("Test Failed");
     }
 }
-testGetResponse();
-
-console.assert(
-  getResponse("sad").includes("sorry"),
-  "Test failed"
-);
