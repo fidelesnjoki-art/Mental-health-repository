@@ -35,6 +35,12 @@ Basic unit Testingusing javascript
 The project is deployed using Github Pages
 It can be hosted easily online
 
+## Technologies used
+Html
+Css
+Javascript
+
+
 ## Author
 Fidelis
 
