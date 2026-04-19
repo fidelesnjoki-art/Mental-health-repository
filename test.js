@@ -9,3 +9,8 @@ function testGetResponse() {
     }
 }
 testGetResponse();
+
+console.assert(
+  getResponse("sad").includes("sorry"),
+  "Test failed"
+);
