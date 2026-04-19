@@ -14,30 +14,30 @@ This is a website desighned to help the users to access mental health assistance
 -Responsive layout desighn in mobile phones and desktops.
 
 ## Installation
--Clone the repository:
+Clone the repository:
 git@github.com:fidelesnjoki-art/Mental-health-repository.git.
--Open the project folder.
--Open Idex.html at any web browser.
+Open the project folder.
+Open Idex.html at any web browser.
 
 ## Api used
  Quotable Api ("https://api.quotable.io/random") to fetch dynamic motivational messages and display them on homepage using javascript fetch()
 
 ## Fonts used
--'poppins', sans-serif.
--'inter' , sans-serif.
--'playfair Display' , sans-serif.
+'poppins', sans-serif.
+'inter' , sans-serif.
+'playfair Display' , sans-serif.
 
 ## Testing
 Basic unit Testing using javascript.
 
 ## Deployment
--The project is deployed using Github Pages.
--It can be hosted easily online.
+The project is deployed using Github Pages.
+It can be hosted easily online.
 
 ## Technologies used
--Html.
--Css.
--Javascript.
+Html.
+Css.
+Javascript.
 
 
 ## Author

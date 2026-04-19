@@ -11,7 +11,6 @@ async function getQuote() {
 }
 
 
-// Load on page open
 getQuote();
 
 if (document.getElementById("quote")) {
