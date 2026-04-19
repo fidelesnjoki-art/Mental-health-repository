@@ -1,0 +1,86 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Confirmation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <a href="Index.html">Home</a>
+  <a href="Support.html">Support</a>
+  <a href="Booking.html">Booking</a>
+</header>
+
+<div class="container">
+
+  <div class="card">
+
+    <h1>Booking Confirmed </h1>
+
+    <p id="doctor"></p>
+    <p id="time"></p>
+
+    <h3>You've taken an important step </h3>
+
+    <p>
+      Reaching out for support is not always easy, and choosing to speak to someone
+      shows strength and self-awareness.
+    </p>
+
+    <p>
+      Our professionals are here to listen without judgment and help you navigate
+      whatever you may be going through.
+    </p>
+
+    <p>
+      You don't have to face things alone. Support is available, and you deserve it.
+    </p>
+
+
+    <h3>What happens next?</h3>
+
+    <p>
+      Your selected professional will be available at your scheduled time.
+      Make sure you are in a quiet and comfortable space for your session.
+    </p>
+
+    <p>
+      If you need immediate support before your appointment, you can talk to someone
+      right now.
+    </p>
+
+
+    <button onclick="location.href='Support.html'">Talk to Someone Now</button>
+    <button onclick="location.href='Index.html'">Back to Home</button>
+
+  </div>
+
+</div>
+
+<script>
+let doctor = localStorage.getItem("doctor");
+let time = localStorage.getItem("appointment");
+
+if (doctor && time) {
+  let date = new Date(time);
+
+  document.getElementById("doctor").innerText =
+    "You booked a session with: " + doctor;
+
+  document.getElementById("time").innerText =
+    "Scheduled for: " + date.toLocaleString();
+}
+</script>
+
+<footer class="footer">
+  <p>© 2026 Mental Health Support</p>
+  <p>You are not alone </p>
+</footer>
+
+
+</body>
+</html>

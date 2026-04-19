@@ -1,63 +1,87 @@
-
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Mood Check Page</title>
+  <title>Mood Check</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header class="navbar">
 
-            <a href="Mood-check.html">Mood-check </a>
-            <a href="Support.html"> Support </a>
-            <a href="Booking.html">Booking </a>
-            <a href="Confirmation.html">Confirmation </a>
+<header class="navbar">
+  <a href="Index.html">Home</a>
+  <a href="Support.html">Support</a>
+  <a href="Booking.html">Booking</a>
+  <a href="Confirmation.html">Confirmation</a>
+</header>
 
-
-  <h2>How are you feeling today?</h2>
-  <p>Take a moment to share how you are feeling and get our help</p>
-
-  <button onclick="setMood('Good')">😊 Good</button>
-  <button onclick="setMood('Okay')">🙂 Okay</button>
-  <button onclick="setMood('Low')">😔 Low</button>
-  <button onclick="setMood('Struggling')">😞 Struggling</button>
-
-  <h3>What Is Affecting you</h3>
-  <p>Sometimes feeling anxious and overwhelmed is normal and we are here to help you feel relaxed</p>
-  you may share with us what is disturbing and stressing you and we will work it out together.
+<div class="container">
 
 
-  <h3>Fill in this area to express how you are feeling</h3>
-  <textarea id="notes" placeholder="Express how you are feeling"></textarea>
+    <h1>How are you feeling today?</h1>
 
-  <p id="result"></p>
+    <p>
+      Take a moment to check in with yourself. Understanding how you feel
+      is the first step toward getting the right support.
+    </p>
+
+    <p>
+      Your response helps guide you to helpful tools and support options.
+    </p>
+
+    <div class="mood-buttons">
+      <button onclick="setMood('Good')">😊 Good</button>
+      <button onclick="setMood('Okay')">🙂 Okay</button>
+      <button onclick="setMood('Low')">😔 Low</button>
+      <button onclick="setMood('Struggling')">😢 Struggling</button>
+    </div>
+
+    <p id="result"></p>
+
+  </div>
+
+  <div class="card" id="suggestions" style="display:none;">
+    <h3>Suggestions for you</h3>
+    <p id="advice"></p>
+
+    <button onclick="location.href='Support.html'">Talk to Someone</button>
+    <button onclick="location.href='Booking.html'">Book a Session</button>
+  </div>
+
+</div>
 
 
 <script>
-    function setMood(mood) {
-      let message = "";
+function setMood(mood) {
+  let result = document.getElementById("result");
+  let advice = document.getElementById("advice");
+  let suggestions = document.getElementById("suggestions");
 
-     if (mood === "Good") {
-        message = "Nice! Keep it up 😊";
+  result.innerText = "You selected: " + mood;
 
-       } 
-       else if (mood === "Okay") {
-       message = "You're doing okay. Take it easy.A small breathing exercise can make you feel better.";
-      } 
-       else if (mood === "Low") {
-        message = "Sorry you're feeling low. You dont have to handle it alone talk to someone.";
-        
-        } 
-      else {
-         message = "You're not alone. Please get support right now.";
-      
-      }
+  suggestions.style.display = "block";
 
-       document.getElementById("result").innerText = message;
-     }
-   </script>
-   <a href="Index.html">Back to Home</a>
+  if (mood === "Good") {
+    advice.innerText = "That's great to hear! Keep doing what makes you feel positive and balanced.";
+  }
 
- </body>
- </html>
+  else if (mood === "Okay") {
+    advice.innerText = "It's okay to feel this way. Try taking a short break or doing something you enjoy.";
+  }
+
+  else if (mood === "Low") {
+    advice.innerText = "You might benefit from talking to someone or practicing a calming activity.";
+  }
+
+  else if (mood === "Struggling") {
+    advice.innerText = "You are not alone. Reaching out to someone could really help right now.";
+  }
+}
+</script>
+
+
+<footer class="footer">
+  <p>© 2026 Mental Health Support</p>
+
+</footer>
+</body>
+</html>

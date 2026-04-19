@@ -1,54 +1,67 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Support Page</title>
+  <title>Support</title>
   <link rel="stylesheet" href="style.css">
-
   <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <header class="navbar">
-    <a href="Mood-check.html">Mood Check</a>
-    <a href="Support.html">Support</a>
-    <a href="Booking.html">Booking</a>
-    <a href="Confirmation.html">Confirmation</a>
-  </header>
+<header class="navbar">
+  <a href="Index.html">Home</a>
+  <a href="Mood-check.html">Mood</a>
+  <a href="Booking.html">Booking</a>
+  <a href="Confirmation.html">Confirmation</a>
+</header>
 
-  <div class="container">
+<div class="container">
 
-    <h1>Talk to someone</h1>
-    <p class="intro">
-      You are not alone. This is a safe space where you can share whats on your mind.
-    </p>
+  <h1>Talk to Someone</h1>
+  <p class="intro">
+    You don't have to go through this alone. Share how you feel and get support.
+  </p>
 
 
-     <div class="input-area">
-      <input type="text" id="userInput" placeholder="Type how you're feeling..." /> 
-      <button onclick="sendMessage()">Send</button>
+  <input type="text" id="input" placeholder="Type how you're feeling..." />
+  <button onclick="sendMessage()">Send</button>
+
+  <h2>How can we help you?</h2>
+
+  <div class="card-container">
+
+    <div class="card">
+      <h3>Anxiety</h3>
+      <p>Feeling nervous or overwhelmed? Try slowing your breathing.</p>
+      <button onclick="quick('I feel anxious')">Select</button>
     </div>
 
     <div class="card">
-      <h3>Prefer professional help?</h3>
-      <p>Book a private session with a psychologist.</p>
-      <button onclick="location.href='Booking.html'">Book a session</button>
+      <h3>Stress</h3>
+      <p>Take a short break and focus on one thing at a time.</p>
+      <button onclick="quick('I feel stressed')">Select</button>
     </div>
 
     <div class="card">
-      <h3>Try something calming</h3>
-      <button>Breathing Exercise</button>
-      <button>Grounding Technique</button>
-      <button>Journaling</button>
-    </div>
-
-    <div class="card emergency">
-      <h3>Need urgent help?</h3>
-      <p>If you feel unsafe, please seek immediate help.</p>
-      <button>Get Emergency Help</button>
+      <h3>Loneliness</h3>
+      <p>You are not alone. Talking can help lighten the feeling.</p>
+      <button onclick="quick('I feel lonely')">Select</button>
     </div>
 
   </div>
+
+  <div class="card">
+    <h3>Need professional help?</h3>
+    <p>You can speak to a trained psychologist anytime.</p>
+    <button onclick="location.href='Booking.html'">Book Session</button>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <p>© 2026 Mental Health Support</p>
+</footer>
 
 </body>
 </html>

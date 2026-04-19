@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <a href="Index.html">Home</a>
+  <a href="Mood-check.html">Mood</a>
+  <a href="Support.html">Support</a>
+  <a href="Confirmation.html">Confirmation</a>
+</header>
+
+<div class="container">
+
+  <h1>Book a Session</h1>
+  <p>Choose a doctor, date and time that works for you</p>
+
+  <div class="time-section">
+    <label>Select Date & Time:</label><br><br>
+    <input type="datetime-local" id="time">
+  </div>
+
+  <div class="card-container">
+
+  <div class="card">
+    <h3>Dr. Sarah</h3>
+    <p><strong>Specialty:</strong> Anxiety & Stress</p>
+    <p><strong>Experience:</strong> 12 years</p>
+    <p><strong>Session:</strong> 45 mins</p>
+    <p><strong>Available:</strong> 9:00 AM - 2:00 PM</p>
+    <button onclick="book('Dr. Sarah')">Book</button>
+  </div>
+
+  <div class="card">
+    <h3>Dr. James</h3>
+    <p><strong>Specialty:</strong> Relationships</p>
+    <p><strong>Experience:</strong> 10 years</p>
+    <p><strong>Session:</strong> 50 mins</p>
+    <p><strong>Available:</strong> 11:00 AM - 5:00 PM</p>
+    <button onclick="book('Dr. James')">Book</button>
+  </div>
+
+  <div class="card">
+    <h3>Dr. Amina</h3>
+    <p><strong>Specialty:</strong> Depression & Trauma</p>
+    <p><strong>Experience:</strong> 8 years</p>
+    <p><strong>Session:</strong> 45 mins</p>
+    <p><strong>Available:</strong> 8:00 AM - 1:00 PM</p>
+    <button onclick="book('Dr. Amina')">Book</button>
+  </div>
+
+  <div class="card">
+    <h3>Dr. Daniel</h3>
+    <p><strong>Specialty:</strong> Anger Management</p>
+    <p><strong>Experience:</strong> 7 years</p>
+    <p><strong>Session:</strong> 40 mins</p>
+    <p><strong>Available:</strong> 10:00 AM - 3:00 PM</p>
+    <button onclick="book('Dr. Daniel')">Book</button>
+  </div>
+
+  <div class="card">
+    <h3>Dr. Grace</h3>
+    <p><strong>Specialty:</strong> Family & Parenting</p>
+    <p><strong>Experience:</strong> 9 years</p>
+    <p><strong>Session:</strong> 60 mins</p>
+    <p><strong>Available:</strong> 12:00 PM - 6:00 PM</p>
+    <button onclick="book('Dr. Grace')">Book</button>
+  </div>
+
+  <div class="card">
+    <h3>Dr. Michael</h3>
+    <p><strong>Specialty:</strong> Burnout & Work Stress</p>
+    <p><strong>Experience:</strong> 11 years</p>
+    <p><strong>Session:</strong> 45 mins</p>
+    <p><strong>Available:</strong> 9:30 AM - 4:00 PM</p>
+    <button onclick="book('Dr. Michael')">Book</button>
+  </div>
+
+</div>
+
+<script>
+function book(name) {
+  let time = document.getElementById("time").value;
+
+  if (time === "") {
+    alert("Please select a date and time");
+    return;
+  }
+
+  localStorage.setItem("doctor", name);
+  localStorage.setItem("appointment", time);
+
+  alert("Session booked successfully with " + name);
+
+  window.location.href = "Confirmation.html";
+}
+</script>
+
+</body>
+</html>
