@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -64,21 +63,46 @@
   </div>
 
 </div>
-
 <script>
-let doctor = localStorage.getItem("doctor");
-let time = localStorage.getItem("appointment");
+  
+const data = JSON.parse(localStorage.getItem("appointments")) || [];
+const last = data[data.length - 1];
 
-if (doctor && time) {
-  let date = new Date(time);
-
-  document.getElementById("doctor").innerText =
-    "You booked a session with: " + doctor;
-
-  document.getElementById("time").innerText =
-    "Scheduled for: " + date.toLocaleString();
+if (last) {
+    document.getElementById("message").innerText =
+        `Booked ${last.doctor} for ${last.name} on ${last.datetime}`;
 }
 </script>
+<!-- <script>
+function bookDoctor(doctorName) {
+
+    const name = document.getElementById("name").value;
+    const datetime = document.getElementById("datetime").value;
+
+    if (!name || !datetime) {
+        alert("Please enter your name and select date/time");
+        return;
+    }
+
+    let appointments = JSON.parse(localStorage.getItem("appointments")) || [];
+
+    const booking = {
+        doctor: doctorName,
+        name: name,
+        datetime: datetime,
+        createdAt: new Date().toLocaleString()
+    };
+
+    appointments.push(booking);
+    localStorage.setItem("appointments", JSON.stringify(appointments));
+
+    alert("Booking successful with " + doctorName);
+
+    window.location.href = "confirmation.html";
+}
+
+</script> -->
+
 
 <footer class="footer">
   <p>© 2026 Mental Health Support</p>

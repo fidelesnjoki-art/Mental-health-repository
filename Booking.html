@@ -25,8 +25,8 @@
 
  <input type="text" id="name" placeholder="Your Name"><br><br>
 
-  <div class="time-section">
-    <label>Select Date & Time:</label><br><br>
+  <!-- <div class="time-section">
+    <label>Select Date & Time:</label><br><br> -->
     <input type="datetime-local" id="time">
   </div>
 
@@ -90,25 +90,36 @@
   </div>
 
 </div>
-
-
 <script>
-function book(name) {
-  let time = document.getElementById("time").value;
+  function book(doctorName) {
 
-  if (time === "") {
-    alert("Please select a date and time");
-    return;
-  }
+    const name = document.getElementById("name").value;
+    const datetime = document.getElementById("time").value;
 
-  localStorage.setItem("doctor", name);
-  localStorage.setItem("appointment", time);
+    if (!name || !datetime) {
+        alert("Please enter your name and select date/time");
+        return;
+    }
 
-  alert("Session booked successfully with " + name);
+    let appointments = JSON.parse(localStorage.getItem("appointments")) || [];
 
-  window.location.href = "Confirmation.html";
+    const booking = {
+        doctor: doctorName,
+        name: name,
+        datetime: datetime,
+        createdAt: new Date().toLocaleString()
+    };
+
+    appointments.push(booking);
+    localStorage.setItem("appointments", JSON.stringify(appointments));
+
+    alert("Booking successful with " + doctorName);
+
+    window.location.href = "Confirmation.html";
 }
 </script>
+
+<script src="index.js"></script>
 
 <footer class="footer">
   <p>© 2026 Mental Health Support</p>
