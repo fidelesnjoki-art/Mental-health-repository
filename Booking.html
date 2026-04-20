@@ -12,7 +12,10 @@
   <a href="index.html">Home</a>
   <a href="Mood-check.html">Mood</a>
   <a href="Support.html">Support</a>
+  <a href="Booking.html">Booking</a>
   <a href="Confirmation.html">Confirmation</a>
+  <a href="Admin.html">Admin features</a>
+
 </header>
 
 <div class="container">
@@ -20,10 +23,15 @@
   <h1>Book a Session</h1>
   <p>Choose a psychologist, date and time that works for you</p>
 
+ <input type="text" id="name" placeholder="Your Name"><br><br>
+
   <div class="time-section">
     <label>Select Date & Time:</label><br><br>
     <input type="datetime-local" id="time">
   </div>
+
+<!-- 
+<button onclick="bookAppointment()">Book</button> -->
 
   <div class="card-container">
 
@@ -83,6 +91,7 @@
 
 </div>
 
+
 <script>
 function book(name) {
   let time = document.getElementById("time").value;
@@ -100,6 +109,11 @@ function book(name) {
   window.location.href = "Confirmation.html";
 }
 </script>
+
+<footer class="footer">
+  <p>© 2026 Mental Health Support</p>
+  <p>You are not alone </p>
+</footer>
 
 </body>
 </html>
