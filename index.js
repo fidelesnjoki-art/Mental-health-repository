@@ -1,4 +1,8 @@
 async function getQuote() {
+     const quoteEl = document.getElementById("Quote");
+
+    
+    if (!quoteEl) return;
   try {
     let response = await fetch("https://api.quotable.io/random");
     let data = await response.json();
