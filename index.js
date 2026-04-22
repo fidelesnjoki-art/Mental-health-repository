@@ -1,45 +1,45 @@
-// async function getQuote() {
-//   try {
-//     let response = await fetch("https://api.quotable.io/random");
-//     let data = await response.json();
-//     document.getElementById("Quote").innerText =
-//       data.content + " — " + data.author;
-//   } catch (error) {
-//     document.getElementById("Quote").innerText ="Stay strong. You are not alone ";
-//   }
-// }
-
-// getQuote();
-
-// if (document.getElementById("Quote")) {
-//   getQuote();
-// }
-
-function getQuote() {
-   const quoteEl = document.getElementById("Quote");
-
-    
-    if (!quoteEl) return;
-    fetch("https://zenquotes.io/api/random")
-        .then(res => res.json())
-        .then(data => {
-            console.log(data[0].q);
-        })
-        .catch(() => {
-            console.log("Quote unavailable");
-        });
+async function getQuote() {
+  try {
+    let response = await fetch("https://api.quotable.io/random");
+    let data = await response.json();
+    document.getElementById("Quote").innerText =
+      data.content + " — " + data.author;
+  } catch (error) {
+    document.getElementById("Quote").innerText ="Stay strong. You are not alone ";
+  }
 }
 
-window.onload = function () {
-    if (document.getElementById("Quote")) {
-        getQuote();
-    }
-};
-
+getQuote();
 
 if (document.getElementById("Quote")) {
   getQuote();
 }
+
+// function getQuote() {
+//    const quoteEl = document.getElementById("Quote");
+
+    
+//     if (!quoteEl) return;
+//     fetch("https://zenquotes.io/api/random")
+//         .then(res => res.json())
+//         .then(data => {
+//             console.log(data[0].q);
+//         })
+//         .catch(() => {
+//             console.log("Quote unavailable");
+//         });
+// }
+
+// window.onload = function () {
+//     if (document.getElementById("Quote")) {
+//         getQuote();
+//     }
+// };
+
+
+// if (document.getElementById("Quote")) {
+//   getQuote();
+// }
 
 
 window.onload = function () {
